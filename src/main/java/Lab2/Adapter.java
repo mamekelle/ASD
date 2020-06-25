@@ -1,7 +1,8 @@
 package Lab2;
 
 public class Adapter  implements TargetStack, TargetQueue {
-    private Adaptee adaptee;
+    private Adaptee adaptee = new Adaptee();
+    private int size;
 
     //In Queue and Stack the Enqueue and Push are the same they both add the element on the end
     @Override
@@ -18,6 +19,11 @@ public class Adapter  implements TargetStack, TargetQueue {
         String str = adaptee.get(end);
         adaptee.remove(end);
         return str;
+    }
+
+    @Override
+    public void enqueue(String str) {
+        adaptee.add(str);
     }
 
     @Override

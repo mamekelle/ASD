@@ -1,7 +1,9 @@
 package Lab2;
 
+import java.util.Arrays;
+
 public class Adaptee {
-    private String[] data;
+    private String[] data= new String[2];
     private int start;
     private int end;
 
@@ -13,12 +15,15 @@ public class Adaptee {
     }
 
     public void add(String str) {
+        if(end==data.length){
+            resize();
+        }
         data[end]=str;
         end++;
     }
 
     public int getEnd() {
-    return end;
+    return end =end-1;
     }
 
     public String get(int pos) {
@@ -26,34 +31,30 @@ public class Adaptee {
     }
 
     public void remove(int pos) {
-        //need revision
-        if (end - pos >= 0) System.arraycopy(data, pos + 1, data, pos, end - pos);
+//In case of Queue
+        if (end - pos >= 0 && pos==0){
+            System.arraycopy(data, pos + 1, data, pos, end );
+            end--;
+        }
+        //In case of Stack
+        if (end - pos >= 0 && pos!=0) System.arraycopy(data, pos+1, data, pos, end-1);
+
     }
 
     public boolean empty() {
         return (end ==-1);
     }
-    class Node  {
-        String value;
-        Node next;
-        Node previous;
-        Node(){}
-        Node(Node next, Node previous, String value){
-            this.next = next;
-            this.previous = previous;
-            this.value = value;
-        }
-        @Override
-        public String toString() {
-            if(value == null) return "";
-            StringBuilder sb = new StringBuilder(value + " ");
-            sb = toString(sb, next);
-            return sb.toString();
-        }
-        private StringBuilder toString(StringBuilder sb, Node n) {
-            if(n == null) return sb;
-            sb.append(n.value + " ");
-            return toString(sb, n.next);
-        }
+
+    private void resize() {
+        System.out.println("resizing");
+        int len = data.length;
+        int newlen = 2 * len;
+        String[] temp = new String[newlen];
+        System.arraycopy(data, 0, temp, 0, len);
+        data = temp;
+    }
+    @Override
+    public String toString() {
+        return "data=" + Arrays.toString(data);
     }
 }
