@@ -9,6 +9,11 @@ public class Client {
         adapterStack.push("D");
         adapterStack.push("F");
         adapterStack.pop();
+        adapterStack.pop();
+        adapterStack.pop();
+        adapterStack.pop();
+        adapterStack.pop();
+
        System.out.println("Stack: "+adapterStack.toString());
        System.out.println(adapterStack.pick());
 

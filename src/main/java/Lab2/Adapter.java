@@ -4,7 +4,6 @@ public class Adapter  implements TargetStack, TargetQueue {
     private Adaptee adaptee = new Adaptee();
     private int size;
 
-    //In Queue and Stack the Enqueue and Push are the same they both add the element on the end
     @Override
     public void push(String str) {
     adaptee.add(str);

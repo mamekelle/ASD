@@ -31,14 +31,16 @@ public class Adaptee {
     }
 
     public void remove(int pos) {
+        boolean stack=false;
 //In case of Queue
-        if (end - pos >= 0 && pos==0){
-            System.arraycopy(data, pos + 1, data, pos, end );
+        if (pos==0){
+            System.arraycopy(data, 1, data, 0, end );
             end--;
         }
         //In case of Stack
         if (end - pos >= 0 && pos!=0) System.arraycopy(data, pos+1, data, pos, end-1);
-
+        if(pos==1||end==-1)
+            data[pos]=null;
     }
 
     public boolean empty() {
