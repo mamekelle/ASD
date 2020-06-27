@@ -1,4 +1,4 @@
-package Lab2;
+package Lab3_1;
 
 @SuppressWarnings("serial")
 public class QueueStackException extends Exception {

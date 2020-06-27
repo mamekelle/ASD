@@ -1,4 +1,4 @@
-package Lab3;
+package Lab3_2;
 
 public class NameRepository implements Aggeregate{
     private String names[][];

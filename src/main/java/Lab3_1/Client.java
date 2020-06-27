@@ -1,4 +1,4 @@
-package Lab2;
+package Lab3_1;
 
 public class Client {
     public static void main(String[] args) throws QueueStackException {

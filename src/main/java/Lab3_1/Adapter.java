@@ -1,4 +1,4 @@
-package Lab2;
+package Lab3_1;
 
 public class Adapter  implements TargetStack, TargetQueue {
     private Adaptee adaptee = new Adaptee();

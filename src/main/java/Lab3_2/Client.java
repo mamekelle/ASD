@@ -1,4 +1,4 @@
-package Lab3;
+package Lab3_2;
 
 public class Client {
     public static void main(String[] args) {

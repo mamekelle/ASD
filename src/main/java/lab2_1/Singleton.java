@@ -1,4 +1,4 @@
-package lab1;
+package lab2_1;
 
 public class Singleton {
 
