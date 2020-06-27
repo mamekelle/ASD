@@ -47,7 +47,6 @@ public class NameRepository implements Aggeregate{
                         //Reset column then increment i because the
                         //return will exit the loop
                         reseIndexes();
-                        System.out.println("str: " + str);
                         return str;
                     }
                     //If null move on
