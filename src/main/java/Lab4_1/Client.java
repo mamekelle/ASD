@@ -1,6 +1,6 @@
 package Lab4_1;
 
-public class Main {
+public class Client {
    public static void main (String[] args){
 	  A a=new A();
 	  a.processTemplate(Resource.A);
