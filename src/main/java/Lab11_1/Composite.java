@@ -16,7 +16,7 @@ public abstract class Composite implements Component {
 
 	public void addChild(Composite node) {
 		if (this.side != Side.NONE)
-			node.setSide(this.side); // add if not root
+			node.setSide(this.side); 
 
 		childs.add(node);
 	}
@@ -28,6 +28,3 @@ public abstract class Composite implements Component {
 	public abstract String getName();
 }
 
-enum Side {
-	RIGHT, LEFT, NONE;
-}

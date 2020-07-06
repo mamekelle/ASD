@@ -11,10 +11,10 @@ import java.util.List;
  */
 public class Client {
 	public static void main(String[] args) {
-		final String input = "+ + 10 5 - 8 2";
+		final String input = "- + 10 5 - 8 2";
 		List<String> tokenList = new ArrayList<String>(Arrays.asList(input.split(" ")));
 		Parser tokenReader = new Parser();
 		Expression expression = tokenReader.parse(tokenList);
-		System.out.println(expression.interpret());
+		System.out.println("The result of input =>  "+input+" equals: "+expression.interpret());
 	}
 }
